@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="-Infinity" prefHeight="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <HBox />
+                  <HBox AnchorPane.leftAnchor="20.0">
+                     <children>
+                        <Button fx:id="lireBtn" mnemonicParsing="false" text="Lire évolution occurrences" />
+                        <Button fx:id="globalBtn" mnemonicParsing="false" text="Occurrences toute période">
+                           <font>
+                              <Font size="10.0" />
+                           </font></Button>
+                        <Button fx:id="histogBtn" mnemonicParsing="false" text="Histogramme">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pane3dAnchor" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" />
+         </children>
+      </VBox>
+      <HBox prefWidth="200.0" spacing="10.0">
+         <children>
+            <VBox maxWidth="150.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Pane fx:id="paneAnnees" />
+                  <TextField fx:id="especeFld" promptText="Nom d'espèce">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="paneEspeces" prefWidth="320.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></HBox>
+      <Label fx:id="chargementTxt" text="Chargement...">
+         <padding>
+            <Insets bottom="10.0" left="10.0" />
+         </padding>
+      </Label>
+   </children>
+</VBox>
